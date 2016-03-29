@@ -51,6 +51,7 @@ ul {
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
+    border-radius: 8px;
 }
 
 li {
@@ -73,3 +74,4 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
+
