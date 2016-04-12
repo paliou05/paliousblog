@@ -30,10 +30,10 @@ def handler404(request):
 def submit(request):
     print request.method
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST or None)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('blog.views.submit'))
+            return HttpResponseRedirect(reverse('blog.views.post_list'))
         else:
             messages.error(request, "Error")
     return render(request, 'blog/submit.html', {'form': PostForm()})
